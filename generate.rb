@@ -23,7 +23,7 @@ new_feed = RSS::Maker.make("atom") do |maker|
     maker.items.new_item do |new_item|
       new_item.title = item.title.sub(" - junebox - Scrapbox", "")
       new_item.link = item.link
-      new_item.description = item.description
+      new_item.description = "<![CDATA[#{item.description}]]>"
       new_item.updated = item.pubDate
     end
   end
