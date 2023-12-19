@@ -36,7 +36,7 @@ jobs:
         run: ruby generate.rb > ./public/feed.xml
 
       - name: Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
