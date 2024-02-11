@@ -22,6 +22,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
     author.name "juneboku"
   end
   xml.link href: "https://scrapbox.io/june29/"
+  xml.link href: "https://api.june29.jp/nikki/atom.xml", rel: "self"
   xml.updated nikki_items.sort_by(&:pubDate).last.pubDate.to_datetime.rfc3339
 
   nikki_items.sort_by(&:pubDate).reverse.each do |item|
